@@ -1,0 +1,175 @@
+:root {
+    --dark-blue: #0A3871;
+    --main-color: #E5E5E5; 
+    --ligth-blue: #D8DFE8;
+    --font-family: "Inter", sans-serif;
+}
+
+html {
+    font-size: 62.5%; 
+}
+
+body {
+    background-color: var(--main-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0; 
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    font-family: var(--font-family);
+}
+
+header {
+    margin-bottom: 5rem;
+    width: 40%;
+    font-family: var(--font-family);
+}
+
+.header_img {
+    width: 120px;
+    height: 48px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh; 
+}
+
+.formulario_input {
+    width: 100%;
+    max-width: 577px;
+    height: 64vh; 
+    border-color: transparent;
+    background: transparent;
+    outline: none;
+    resize: none;
+    color: var(--dark-blue);
+    font-size: 3.2rem;
+    font-family: var(--font-family);
+    margin-bottom: 3rem;
+    overflow: auto;
+}
+
+::placeholder {
+    color: var(--dark-blue);
+}
+
+.alert_icono {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: gray;
+}
+
+.submit_container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.button_encriptar,
+.button_desencriptar,
+.result_btn {
+    background: var(--dark-blue);
+    color: white;
+    font-size: 1.6rem;
+    padding: 1rem 2rem;
+    width: 328px;
+    height: 67px;
+    border-radius: 24px;
+    border: 1px solid var(--dark-blue);
+    font-weight: 550;
+}
+
+.button_form--secundary {
+    background: transparent;
+    color: var(--dark-blue);
+}
+
+.result {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    height: 72vh; 
+    border-radius: 32px;
+    max-width: 400px;
+    width: 100%;
+    height: 650px;
+}
+
+.aside_titulo {
+    font-size: 21px;
+}
+
+.aside_texto {
+    font-size: 13px;
+}
+
+.result_img {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (max-width: 778px) {
+    main {
+        flex-direction: column;
+    }
+    .submit_container {
+        justify-content: center;
+    }
+    .result {
+        height: auto;
+        max-width: 624px;
+        margin-top: 2rem;
+        min-height: 186px;
+    }
+    .result_img {
+        display: none;
+    }
+    .button_encriptar,
+    .button_desencriptar {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 1.5rem;
+    }
+
+    .header_img {
+        width: 90px;
+        height: auto;
+    }
+}
+
+/* Loader animación */
+.loader {
+    width: 50px;
+    padding: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #25b09b;
+    --_m:
+        conic-gradient(#0000 10%, #000),
+        linear-gradient(#000 0 0) content-box;
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+    to {
+        transform: rotate(1turn);
+    }
+}
